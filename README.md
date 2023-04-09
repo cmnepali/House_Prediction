@@ -17,6 +17,10 @@ pip install -r requirements.txt
 
 ### Write code for setup.py
 
+### write the code for exception.py
+
+### write the code for logger.py
+
 ```
 
 ```

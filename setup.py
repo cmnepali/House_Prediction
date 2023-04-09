@@ -1,25 +1,25 @@
 from setuptools import find_packages,setup
 from typing import List
 
-HYPEN_E_DOT ='-e .'
-
+HYPEN_E_DOT='-e .'
 def get_requirements(file_path:str)->List[str]:
+    '''
+    This function will return the list of requirements.
+    '''
     requirements=[]
     with open(file_path) as file_obj:
-        requirements=file_obj.readline()
+        requirements=file_obj.readlines()
         requirements=[req.replace("\n","") for req in requirements]
 
         if HYPEN_E_DOT in requirements:
             requirements.remove(HYPEN_E_DOT)
     return requirements
 
-
-
 setup(
-    name='RegressorProject',
+    name='House_Prediction1',
     version='0.0.1',
-    author='cm',
+    author='cmnepali',
     author_email='cmnepali79111@gmail.com',
-    install_requires=get_requirements('requirements.txt'),
-    packages=find_packages()
+    packages=find_packages(),
+    install_requires=get_requirements('requirements.txt')
 )
